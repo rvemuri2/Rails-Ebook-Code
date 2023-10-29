@@ -1,2 +1,22 @@
-<h1>Say#goodbye</h1>
-<p>Find me in app/views/say/goodbye.html.erb</p>
+<h1>Goodbye!</h1>
+<p>
+It was nice having you here.</p>
+
+<h1> Go to the <%= link_to "hello page", say_hello_path %> </h1>
+
+<h1> Time in one hour: <%= 5.hour.from_now.localtime %> </h1> 
+
+<p> <% @files.each do |file| %>
+    file name is:  <ol> <%= file %> </ol>
+ <% end %> </p>
+
+ <% if @error_message %>
+ <p><%= @error_message %></p>
+<% else %>
+ <h1>Files in <%= @folder_name %>:</h1>
+ <ul>
+   <% @files1.each do |file| %>
+     <li><%= file %></li>
+   <% end %>
+ </ul>
+<% end %>
